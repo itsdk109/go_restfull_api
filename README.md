@@ -1,8 +1,8 @@
 # Basic Book REST API
-This is a simple RESTful API for managing a collection of books. It is built using Go and the Chi router, with PostgreSQL as the database.
+&rarr; This is a simple RESTful API for managing a collection of books. It is built using Go and the Chi router, with PostgreSQL as the database.
 
 ## Prerequisites
-Before running this application, make sure you have the following installed:
+&rarr; Before running this application, make sure you have the following installed:
 
 + Go (https://golang.org/)
   
@@ -29,11 +29,11 @@ Before running this application, make sure you have the following installed:
   
     
 ## Database Configuration
-The application connects to a PostgreSQL database. Make sure to configure the database connection in the init function of the main package. Update the connection string in the following line:
+&rarr; The application connects to a PostgreSQL database. Make sure to configure the database connection in the init function of the main package. Update the connection string in the following line:
 go
 
 ```bash
-    db, err = sqlx.Open("postgres", "user=postgres password=admin1234 host=127.0.0.1 dbname=book_rest_api sslmode=disable")
+    db, err = sqlx.Open("postgres", "user=postgres password=Your_postgres_password host=Your_local_host dbname=Your_databse_name sslmode=disable")
 ```
 
 ## API Endpoints
@@ -44,7 +44,7 @@ go
  + PUT /updatebooksbyid/{id}: Update a book by ID.
     
 ## Usage : 
--> use Postman to interact with the Book REST API
+&rarr; use Postman to interact with the Book REST API
 ### => Creating a Book
 Send a POST request to http://localhost:2222/createbooks with the following JSON payload:
 
@@ -70,4 +70,4 @@ Send a PUT request to http://localhost:2222/updatebooksbyid/{id}, replacing {id}
 Send a DELETE request to http://localhost:2222/deletebooksbyid/{id}, replacing {id} with the actual ID.
 
 ## Note:
-This is a simple example, and error handling, security, and other production considerations are not fully implemented. Ensure proper security measures are in place before deploying this application in a production environment.
+&rarr; This is a simple example, and error handling, security, and other production considerations are not fully implemented. Ensure proper security measures are in place before deploying this application in a production environment.

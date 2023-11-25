@@ -17,4 +17,30 @@ go
     POST /createbooks: Create a new book.
     DELETE /deletebooksbyid/{id}: Delete a book by ID.
     PUT /updatebooksbyid/{id}: Update a book by ID.
+# Usage
+## => Creating a Book
+Send a POST request to http://localhost:2222/createbooks with the following JSON payload:
 
+### json
+{
+  "id": "1",
+  "title": "Sample Book",
+  "author": "John Doe",
+  "publishedate": "2023-01-01",
+  "language": "English"
+}
+
+## => Getting All Books
+Send a GET request to http://localhost:2222/getallbooks.
+
+## => Getting a Book by ID
+Send a GET request to http://localhost:2222/getbooksbyid/{id}, replacing {id} with the actual ID.
+
+## => Updating a Book by ID
+Send a PUT request to http://localhost:2222/updatebooksbyid/{id}, replacing {id} with the actual ID. Include the updated book details in the request body.
+
+## => Deleting a Book by ID
+Send a DELETE request to http://localhost:2222/deletebooksbyid/{id}, replacing {id} with the actual ID.
+
+# Note:
+This is a simple example, and error handling, security, and other production considerations are not fully implemented. Ensure proper security measures are in place before deploying this application in a production environment.
